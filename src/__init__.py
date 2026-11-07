@@ -1,0 +1,1 @@
+"""LingoPal application."""

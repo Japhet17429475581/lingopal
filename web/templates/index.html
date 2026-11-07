@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8f2">
+  <meta name="description" content="LingoPal — испанский маленькими шагами. Карточки, понятная грамматика и истории для чтения.">
+  <title>LingoPal — твой испанский, каждый день</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <script>window.LINGOPAL_CONFIG = {{ client_config | tojson }};</script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    // Применяем тему ДО первой отрисовки — иначе будет видна вспышка
+    // дефолтной темы Madrid перед переключением на сохранённую.
+    (function () {
+      var saved; try { saved = localStorage.getItem('lingopal-theme'); } catch (e) {}
+      if (saved && saved !== 'madrid') {
+        document.documentElement.setAttribute('data-app-theme', saved);
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#screen-cards">К занятиям</a>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="LingoPal — главная"><span class="brand-mark">L<span>·</span></span><span>lingo<span class="brand-light">pal</span><small>un poquito cada día</small></span></a>
+    <div class="header-caption">ТВОЁ МЕСТО ДЛЯ ИСПАНСКОГО</div>
+    <span class="language-badge"><span>🇪🇸</span> Испанский <span class="status-dot"></span></span>
+  </header>
+  <div class="connection-banner" id="connectionBanner" role="status" hidden>Нет подключения. Прогресс продолжит сохраняться после восстановления связи.</div>
+
+  <!-- ОНБОРДИНГ: ПРИВЕТСТВИЕ (только для is_new пользователей) -->
+  <div id="welcome-screen" class="screen-overlay" style="display:none;">
+    <div class="welcome-card">
+      <h1>¡Hola! Добро пожаловать в LingoPal</h1>
+      <p>Интерактивный репетитор испанского в Telegram — карточки, живой словарь, тесты по грамматике и болтовня с Хосе. Прокачивай уровень, копи стрик, учи по-настоящему.</p>
+      <button id="start-app-btn">Погнали! 🚀</button>
+    </div>
+  </div>
+
+  <!-- ШАПКА ПРОФИЛЯ: уровень, EXP, стрик -->
+  <div class="profile-bar" id="profileBar">
+    <button class="profile-bar-flag" id="profileBarFlag" title="Профиль и статистика">🇪🇸</button>
+
+    <div class="profile-bar-level" title="Уровень">
+      <span class="profile-level-badge mono" id="profileLevelBadge">1</span>
+    </div>
+
+    <div class="profile-bar-exp">
+      <div class="profile-exp-bar"><div class="profile-exp-fill" id="profileExpFill"></div></div>
+      <span class="profile-exp-label mono" id="profileExpLabel">0/50</span>
+    </div>
+
+    <div class="profile-bar-streak" id="profileStreak" title="Стрик">
+      <span class="profile-streak-fire" id="profileStreakFire">🔥</span>
+      <span class="mono" id="profileStreakCount">0</span>
+    </div>
+  </div>
+
+  <!-- Всплывающая анимация левел-апа / смены уровня стрика -->
+  <div class="level-up-overlay" id="levelUpOverlay">
+    <div class="level-up-card">
+      <div class="level-up-glyph" id="levelUpGlyph">🎉</div>
+      <div class="level-up-title" id="levelUpTitle">Новый уровень!</div>
+    </div>
+  </div>
+
+  <!-- ЭКРАН: КАРТОЧКИ -->
+  <section class="screen active" id="screen-cards">
+
+    <div id="cardsPicker">
+      <div class="page-heading"><div><span class="eyebrow">VAMOS A APRENDER</span><h1 class="page-title">Маленький шаг.<br>Большой <span>прогресс.</span></h1><p class="page-sub">Немного испанского сегодня — больше уверенности завтра.</p></div><span class="heading-note">Твой темп.<br>Твой испанский.</span></div>
+      <div class="study-layout">
+      <div class="study-main">
+      <div class="practice-banner"><div><span class="eyebrow">ПРАКТИКА, КОТОРАЯ ОСТАЁТСЯ</span><h2>Слова становятся<br>частью тебя.</h2><p>Вспоминай, переворачивай, повторяй.<br>Одна карточка за раз.</p><span class="practice-tag"><span class="status-dot"></span> 5–10 минут для себя</span></div><div class="banner-art" aria-hidden="true"><div class="art-orbit"></div><div class="art-card art-card-back">a<span>а</span></div><div class="art-card art-card-front"><span class="art-small">ESPAÑOL</span><b>¡Hola!</b><span>Привет</span><i>✦</i></div><span class="art-star">✳</span></div></div>
+      <div class="training-panel"><div class="panel-heading"><h2>Твоя тренировка</h2><span class="subtle-label">Подстроим под тебя</span></div>
+
+      <!-- ЕЖЕДНЕВНЫЕ КВЕСТЫ -->
+
+      <div class="picker-group">
+        <div class="picker-label">01 <span>Твой уровень</span></div>
+        <div class="picker-row" id="levelPicker">
+          <button class="picker-btn active" data-level="A1">A1<small>Начинаю</small></button>
+          <button class="picker-btn" data-level="A2">A2<small>Осваиваюсь</small></button>
+          <button class="picker-btn" data-level="B1">B1<small>Общаюсь</small></button>
+          <button class="picker-btn" data-level="B2">B2<small>Уверенно</small></button>
+        </div>
+      </div>
+
+      <div class="picker-group">
+        <div class="picker-label">02 <span>Что будем учить?</span></div>
+        <div class="picker-row two-col" id="typePicker">
+          <button class="picker-btn active" data-type="word">Слова</button>
+          <button class="picker-btn" data-type="sentence">Предложения</button>
+        </div>
+      </div>
+
+      <div class="picker-group">
+        <label class="picker-label" for="packSizeSlider">03 <span>Количество карточек</span><b id="packSizeValue" class="mono">10</b></label>
+        <input type="range" id="packSizeSlider" min="5" max="20" value="10" class="pack-size-slider"><div class="range-labels"><span>5 · небольшой шаг</span><span>20 · полный вперёд</span></div>
+      </div>
+
+      <button class="start-btn" id="startDeckBtn">Начать тренировку <span>↗</span></button>
+      </div>
+
+      <div class="level-progress" id="levelProgress"></div>
+      <div class="packs-list" id="packsList"></div>
+      </div>
+      <aside class="study-aside"><div class="quests-block" id="questsBlock"><div class="panel-heading"><h2>Сегодня в фокусе</h2><span class="tiny-sun">☀</span></div><p class="aside-description">Пара маленьких побед на каждый день.</p><div id="questsList"><p class="aside-description">Загружаем задания…</p></div></div>
+      <button class="grammar-shortcut" id="grammarShortcut"><span class="eyebrow">СЛОЖИТЬ ВСЁ ВМЕСТЕ</span><span class="shortcut-symbol">Aa<span>✦</span></span><strong>Грамматика<br>без головной боли.</strong><span>Понятные правила. Живые примеры.</span><b>Открыть темы ↗</b></button>
+      <div class="daily-note"><span>POCO A POCO</span><p>Не обязательно идеально.<br>Главное — понемногу.</p><i>✳</i></div></aside>
+      </div>
+    </div>
+
+    <div id="cardsDeck" style="display:none; flex:1; flex-direction:column;">
+      <div class="deck-progress">
+        <button class="tab-btn" style="flex:none; padding:0; color:var(--text-muted);" id="exitDeckBtn">← Назад</button>
+        <span id="deckProgressLabel" class="mono"></span>
+      </div>
+
+      <div class="deck-pack-label mono" id="deckPackLabel"></div>
+      <div class="deck-stage" id="deckStage"></div>
+      <div class="deck-actions" id="deckActions"></div>
+    </div>
+
+  </section>
+
+  <!-- ЭКРАН: СЛОВАРЬ -->
+  <section class="screen" id="screen-dictionary">
+
+    <div id="dictionaryMainView">
+      <span class="eyebrow">TUS PALABRAS</span><h1 class="page-title">Твой словарь<span>.</span></h1>
+      <p class="page-sub">Слова и предложения, которые ты уже знаешь</p>
+
+      <button class="leitner-review-btn" id="leitnerReviewBtn" disabled>
+        Повторить слова 🔥 <span id="leitnerDueCount">…</span>
+      </button>
+
+      <input type="search" class="search-input" id="dictSearch" aria-label="Поиск в словаре" placeholder="Поиск по испанскому или русскому…">
+
+      <div class="dict-filter-row" id="dictLevelFilter">
+        <button class="dict-filter-btn active" data-level="">Все</button>
+        <button class="dict-filter-btn" data-level="A1">A1</button>
+        <button class="dict-filter-btn" data-level="A2">A2</button>
+        <button class="dict-filter-btn" data-level="B1">B1</button>
+        <button class="dict-filter-btn" data-level="B2">B2</button>
+      </div>
+
+      <div class="review-packs-list" id="reviewPacksList"></div>
+
+      <div class="alpha-strip" id="alphaStrip"></div>
+
+      <div class="selection-bar" id="selectionBar" style="display:none;">
+        <span id="selectionCount" class="mono">0 выбрано</span>
+        <button class="review-selected-btn" id="reviewSelectedBtn">🔄 Повторить выбранное</button>
+      </div>
+
+      <div id="dictList"></div>
+
+      <div class="empty-state" id="dictEmpty" style="display:none;">
+        <div class="glyph">🗂</div>
+        Словарь пока пуст — свайпай карточки вправо, чтобы добавлять слова
+      </div>
+    </div>
+
+    <div id="leitnerSessionView" style="display:none; flex-direction:column; flex:1;">
+      <div class="deck-progress">
+        <button class="tab-btn" style="flex:none; padding:0; color:var(--text-muted);" id="leitnerExitBtn">← Назад</button>
+        <span id="leitnerProgressLabel" class="mono"></span>
+      </div>
+
+      <div id="leitnerStage" style="flex:1; display:flex; align-items:center; justify-content:center;"></div>
+    </div>
+
+  </section>
+
+  <!-- ЭКРАН: ГРАММАТИКА -->
+  <section class="screen" id="screen-grammar">
+    <span class="eyebrow">PASO A PASO</span><h1 class="page-title">Всё складывается<span>.</span></h1><p class="page-sub">От первого hola до уверенных фраз. Одно правило за раз.</p>
+
+    <div class="grammar-onboarding" id="grammarOnboarding" style="display:none;">
+      <p class="page-sub">Выбери точку старта. Потом весь путь будет открываться последовательно.</p>
+      <div class="grammar-level-cards" id="grammarLevelCards">
+        <button class="grammar-level-card" data-level="A1"><div class="grammar-level-title">A1</div><div class="grammar-level-desc">С нуля — фундамент испанского</div></button>
+        <button class="grammar-level-card" data-level="A2"><div class="grammar-level-title">A2</div><div class="grammar-level-desc">Повседневный испанский</div></button>
+        <button class="grammar-level-card" data-level="B1"><div class="grammar-level-title">B1</div><div class="grammar-level-desc">Уверенное общение</div></button>
+        <button class="grammar-level-card" data-level="B2"><div class="grammar-level-title">B2</div><div class="grammar-level-desc">Свободная сложная речь</div></button>
+      </div>
+    </div>
+
+    <div id="grammarRoadmap" style="display:none;">
+      <div class="grammar-roadmap-header">
+        <div class="grammar-roadmap-kicker">ТВОЙ УЧЕБНЫЙ ПУТЬ</div>
+        <h2 id="grammarRoadmapTitle">A1 · Foundations</h2>
+        <p id="grammarRoadmapSubtitle">Проходи темы по порядку и собирай EXP.</p>
+      </div>
+      <div class="grammar-switcher" id="grammarSwitcher">
+        <button class="grammar-switcher-btn" data-level="A1">A1</button>
+        <button class="grammar-switcher-btn" data-level="A2">A2</button>
+        <button class="grammar-switcher-btn" data-level="B1">B1</button>
+        <button class="grammar-switcher-btn" data-level="B2">B2</button>
+      </div>
+      <div class="grammar-summary" id="grammarSummary"></div><div class="grammar-level-bar"><div id="grammarLevelFill"></div></div>
+      <div id="grammarTopicsList" class="grammar-roadmap"></div>
+    </div>
+
+    <div id="grammarTheory" style="display:none;">
+      <button class="tab-btn" style="flex:none; padding:0; color:var(--text-muted); margin-bottom:14px;" id="grammarTheoryBack">← К темам</button>
+
+      <div class="grammar-theory-card">
+        <div class="grammar-theory-title" id="grammarTheoryTitle"></div>
+        <div class="grammar-theory-text" id="grammarTheoryText"></div>
+      </div>
+
+      <button class="start-btn" id="grammarStartTestBtn">Начать тест</button>
+    </div>
+
+    <div id="grammarTest" style="display:none; flex:1; flex-direction:column;">
+      <div class="deck-progress">
+        <button class="tab-btn" style="flex:none; padding:0; color:var(--text-muted);" id="grammarTestExitBtn">← Назад</button>
+        <span id="grammarTestProgress" class="mono"></span>
+      </div>
+
+      <div class="grammar-level-bar"><div id="grammarTestFill"></div></div><div id="grammarQuestionStage"></div>
+    </div>
+  </section>
+
+  <!-- ЭКРАН: АССИСТЕНТ -->
+  <section class="screen" id="screen-assistant">
+    <div class="chat-header">
+  <div>
+    <div class="chat-header-name">Хосе</div>
+    <div class="chat-header-status" id="chatHeaderStatus">Твой собеседник и репетитор</div>
+  </div>
+</div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-starters" id="chatStarters"></div>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Спроси что-нибудь у Хосе…" autocomplete="off">
+      <button class="chat-send-btn" id="chatSendBtn" aria-label="Отправить">➤</button>
+    </div>
+  </section>
+
+  <!-- ЭКРАН: LINGUAPLAY -->
+  <section class="screen" id="screen-linguaplay">
+
+    <div id="booksListView">
+      <span class="eyebrow">UNA HISTORIA MÁS</span><h1 class="page-title">Читать. Понимать.<br>Увлекаться<span>.</span></h1>
+      <p class="page-sub">Истории на твоём уровне. Нажми на незнакомое слово, чтобы узнать перевод.</p>
+
+      <div class="picker-row" id="bookLevelFilter" style="margin-bottom:18px;">
+        <button class="picker-btn active" data-level="A1">A1</button>
+        <button class="picker-btn" data-level="A2">A2</button>
+        <button class="picker-btn" data-level="B1">B1</button>
+        <button class="picker-btn" data-level="B2">B2</button>
+      </div>
+
+      <div id="booksList"></div>
+    </div>
+
+    <div id="bookReaderView" style="display:none; flex-direction:column; flex:1;">
+      <div class="reader-header">
+        <button class="tab-btn" style="flex:none; padding:0; color:var(--text-muted);" id="bookReaderBack">← К книгам</button>
+        <span id="bookReaderTitle" class="reader-title"></span>
+      </div>
+
+      <div class="reader-text" id="bookReaderText"></div>
+      <div class="reader-controls"><button id="bookPrevPage" aria-label="Предыдущая страница">← Назад</button><span id="bookPageCounter" aria-live="polite"></span><button id="bookNextPage" aria-label="Следующая страница">Дальше →</button></div>
+    </div>
+
+  </section>
+
+  <!-- Плавающая кнопка перевода -->
+  <button class="selection-translate-btn" id="selectionTranslateBtn" style="display:none;">Перевести выделенное</button>
+
+  <!-- Попап перевода -->
+  <div class="word-popup" id="wordPopup" style="display:none;">
+    <div class="word-popup-original" id="wordPopupOriginal"></div>
+
+    <div class="word-popup-loader" id="wordPopupLoader">
+      <div class="typing-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="word-popup-translation" id="wordPopupTranslation" style="display:none;"></div>
+
+    <div class="word-popup-actions" id="wordPopupActions" style="display:none;">
+      <button class="word-popup-add-btn" id="wordPopupAddBtn">+ В словарь</button>
+      <button class="word-popup-close-btn" id="wordPopupCloseBtn">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- ЭКРАН: ПРОФИЛЬ -->
+  <section class="screen" id="screen-profile">
+
+    <div class="profile-header">
+      <img class="profile-avatar" id="profileAvatarImg" alt="" style="display:none;">
+      <div class="profile-avatar-placeholder" id="profileAvatarPlaceholder">👤</div>
+
+      <div>
+        <div class="profile-name" id="profileName">Пользователь</div>
+
+        <div class="profile-header-sub">
+          Уровень <span id="profileHeaderLevel">1</span> ·
+          <span id="profileHeaderStreak">0</span> 🔥
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-stats-grid" id="profileStatsGrid"></div>
+
+    <!-- Ачивки -->
+    <div class="profile-section-title">🏅 Достижения</div>
+    <div class="achievements-grid" id="achievementsGrid"></div>
+
+
+    <!-- Настройки -->
+    <div class="profile-section-title">⚙️ Настройки</div>
+
+    <div class="settings-block">
+
+      <div class="settings-row">
+        <span>Видимость профиля</span>
+
+        <label class="settings-toggle">
+          <input type="checkbox" id="isPublicToggle" checked>
+          <span class="settings-toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="settings-row" style="flex-direction:column; align-items:stretch; gap:10px;">
+        <span>Тема оформления</span>
+
+        <div class="theme-picker" id="themePicker">
+
+          <button class="theme-swatch" data-theme="madrid" title="Классика (Madrid)">
+            <span class="theme-swatch-dots">
+              <i style="background:#32634B;"></i>
+              <i style="background:#B78B61;"></i>
+            </span>
+            Madrid
+          </button>
+
+          <button class="theme-swatch" data-theme="siesta" title="Сиеста (Siesta)">
+            <span class="theme-swatch-dots">
+              <i style="background:#6A6C37;"></i>
+              <i style="background:#FAF5E7;"></i>
+            </span>
+            Siesta
+          </button>
+
+          <button class="theme-swatch" data-theme="flamenco" title="Фламенко (Flamenco)">
+            <span class="theme-swatch-dots">
+              <i style="background:#945044;"></i>
+              <i style="background:#F6E9E3;"></i>
+            </span>
+            Flamenco
+          </button>
+
+        </div>
+      </div>
+
+      <div class="settings-row disabled">
+        <span>Язык интерфейса</span>
+        <span class="settings-stub">Русский</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- НИЖНЯЯ НАВИГАЦИЯ -->
+  <nav class="tabbar" aria-label="Основная навигация"><div class="nav-heading">ТВОЙ ИСПАНСКИЙ</div>
+
+    <button class="tab-btn active" data-tab="cards">
+      <span class="tab-icon" aria-hidden="true">▱</span>
+      <span class="tab-label">Карточки</span>
+    </button>
+
+    <button class="tab-btn" data-tab="dictionary">
+      <span class="tab-icon" aria-hidden="true">▤</span>
+      <span class="tab-label">Словарь</span>
+    </button>
+
+    <button class="tab-btn" data-tab="grammar">
+      <span class="tab-icon" aria-hidden="true">Aa</span>
+      <span class="tab-label">Грамматика</span>
+    </button>
+
+    <button class="tab-btn" data-tab="linguaplay">
+      <span class="tab-icon" aria-hidden="true">▥</span>
+      <span class="tab-label">Чтение</span>
+    </button>
+
+    <button class="tab-btn" data-tab="assistant">
+      <img class="tab-icon-img" id="assistantTabIcon" alt="">
+      <span class="tab-label">Хосе</span>
+    </button>
+
+    <button class="tab-btn" data-tab="profile">
+      <span class="tab-icon" aria-hidden="true">☺</span>
+      <span class="tab-label">Профиль</span>
+    </button>
+
+    <div class="nav-footer"><span class="nav-flower">✳</span><b>¡Un poquito más!</b><span>Каждый день чуть ближе.</span></div>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Попап-меню слова -->
+  <div class="word-menu" id="wordMenu">
+    <button id="wordMenuAsk">❓ Спросить Хосе</button>
+  </div>
+
+  <!-- Модалка прогресса по ачивке -->
+  <div class="sheet-overlay" id="achievementModalOverlay">
+    <div class="sheet">
+
+      <div class="sheet-handle"></div>
+
+      <div class="achievement-modal-icon" id="achievementModalIcon"></div>
+      <div class="achievement-modal-title" id="achievementModalTitle"></div>
+      <div class="achievement-modal-progress-text mono" id="achievementModalProgressText"></div>
+
+      <div class="achievement-modal-bar">
+        <div class="achievement-modal-bar-fill" id="achievementModalBarFill"></div>
+      </div>
+
+      <div class="achievement-modal-hint" id="achievementModalHint"></div>
+
+      <button class="sheet-close" id="achievementModalClose">
+        Закрыть
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Модалка контекста/примеров от Хосе -->
+  <div class="sheet-overlay" id="contextModalOverlay">
+    <div class="sheet context-sheet">
+
+      <div class="sheet-handle"></div>
+
+      <div class="context-modal-word" id="contextModalWord"></div>
+
+      <div class="context-loader" id="contextLoader">
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <span>Хосе думает…</span>
+      </div>
+
+      <div class="context-body" id="contextBody" style="display:none;">
+        <div class="context-text" id="contextText"></div>
+        <div class="context-examples" id="contextExamples"></div>
+      </div>
+
+      <button class="sheet-close" id="contextModalClose">
+        Закрыть
+      </button>
+
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+  <script src="/static/chat.js"></script>
+  <script src="/static/grammar.js"></script>
+  <script src="/static/profile.js"></script>
+  <script src="/static/books.js"></script>
+
+</body>
+</html>
+

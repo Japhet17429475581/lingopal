@@ -1,0 +1,122 @@
+id,block_id,order_num,title,theory
+a1_01_01,a1_01,1,"Правило: Местоимения, род и артикли","Yo — я, tú — ты, él/ella — он/она, nosotros/nosotras — мы, vosotros/vosotras — вы, ellos/ellas — они. Usted и ustedes — вежливое «вы», но глагол стоит в третьем лице.
+Окончание -o часто указывает на мужской род, -a — на женский. Это подсказка, а не абсолютное правило: el día, la mano."
+a1_01_02,a1_01,2,Примеры в контексте,"El libro — книга. La casa — дом. Los libros — книги. Las casas — дома.
+Un libro — какая-то книга; el libro — уже известная книга. Unos/unas — несколько.
+Прилагательное согласуется: un libro rojo, una casa roja."
+a1_01_03,a1_01,3,На что обратить внимание,"Запоминай существительное вместе с артиклем. Во множественном числе после гласной обычно добавляют -s, после согласной — -es: casa → casas, profesor → profesores."
+a1_02_01,a1_02,1,Правило: Ser: личность и происхождение,"Ser описывает личность, происхождение, профессию, время: soy, eres, es, somos, sois, son.
+Местоимение часто опускают: Soy de Rusia. Окончание глагола уже показывает лицо."
+a1_02_02,a1_02,2,Примеры в контексте,"Soy estudiante — я студент. Somos de Madrid — мы из Мадрида. Ella es española — она испанка. Son las dos — два часа.
+Для профессии без уточнения артикль обычно не нужен: Soy profesor."
+a1_02_03,a1_02,3,На что обратить внимание,"Ser и estar выбирают по значению, а не только по «постоянно/временно». События локализуют с ser: La fiesta es en mi casa. Местоположение людей и предметов — estar."
+a1_03_01,a1_03,1,Правило: Estar: местоположение и состояние,"Формы estar: estoy, estás, está, estamos, estáis, están. Estar обозначает местоположение людей и предметов, а также состояние.
+Для наличия неизвестного предмета используется hay: Hay un libro. Для места известного: El libro está aquí."
+a1_03_02,a1_03,2,Примеры в контексте,"Estoy cansado — я устал. Ana está en casa — Ана дома. Estamos bien — у нас всё хорошо.
+Hay una farmacia cerca — рядом есть аптека. La farmacia está a la derecha — аптека справа."
+a1_03_03,a1_03,3,На что обратить внимание,"Ударения в estás, está, estáis, están обязательны. Ser и estar могут менять смысл прилагательного: es aburrido — он скучный; está aburrido — ему скучно."
+a1_04_01,a1_04,1,"Правило: Настоящее время: -ar, -er, -ir","Для presente убери окончание инфинитива и добавь личное. Hablar: hablo, hablas, habla, hablamos, habláis, hablan.
+Comer: como, comes, come, comemos, coméis, comen. Vivir: vivo, vives, vive, vivimos, vivís, viven."
+a1_04_02,a1_04,2,Примеры в контексте,"Estudio español cada día — я учу испанский каждый день. Comemos a las dos — мы едим в два. Viven en Valencia — они живут в Валенсии.
+Presente подходит для привычек, фактов и действий в настоящем."
+a1_04_03,a1_04,3,На что обратить внимание,"Не добавляй личное окончание к целому инфинитиву: hablar → hablo, а не hablaro. Многие частые глаголы неправильные: tener → tengo, ir → voy."
+a1_05_01,a1_05,1,Правило: Возвратные глаголы и распорядок дня,"Возвратные местоимения: me, te, se, nos, os, se. Они согласуются с субъектом: me levanto, te levantas, se levanta.
+В личной форме местоимение стоит перед глаголом; с инфинитивом его можно присоединить: Voy a levantarme / Me voy a levantar."
+a1_05_02,a1_05,2,Примеры в контексте,"Me levanto a las siete — я встаю в семь. Nos duchamos por la mañana — мы принимаем душ утром. Se acuesta temprano — он/она ложится рано.
+Acostarse меняет o → ue в ударной основе: me acuesto, но nos acostamos."
+a1_05_03,a1_05,3,На что обратить внимание,Для частей тела часто употребляют определённый артикль: Me lavo las manos. Возвратность и личное окончание нужны одновременно: nosotros nos levantamos.
+a1_06_01,a1_06,1,Правило: Вопросы и отрицание,"Вопросительные слова пишутся с ударением: qué, quién, dónde, cuándo, cómo, cuánto, por qué. Испанский вопрос обрамляют ¿…?
+Для отрицания no ставят перед личным глаголом: No hablo francés. С местоимением: No lo sé."
+a1_06_02,a1_06,2,Примеры в контексте,"¿Dónde vives? — где ты живёшь? ¿Cómo te llamas? — как тебя зовут? ¿Por qué estudias español? — почему ты учишь испанский?
+Ответ «потому что» пишется слитно: Porque me gusta."
+a1_06_03,a1_06,3,На что обратить внимание,No veo a nadie — я никого не вижу. Отрицательное слово после глагола требует no; перед глаголом — нет: Nadie viene. Не путай por qué (вопрос) и porque (ответ).
+a2_01_01,a2_01,1,Правило: Pretérito perfecto,"Pretérito perfecto compuesto: presente haber + причастие. He, has, ha, hemos, habéis, han + hablado/comido/vivido.
+Частые неправильные причастия: hecho, dicho, visto, escrito, puesto, vuelto."
+a2_01_02,a2_01,2,Примеры в контексте,"Hoy he estudiado — сегодня я позанимался. ¿Has visto esta película? — ты видел этот фильм? Nunca hemos estado allí — мы никогда там не были.
+В Испании это время часто связано с ещё не завершённым периодом: hoy, esta semana."
+a2_01_03,a2_01,3,На что обратить внимание,"Причастие с haber не согласуется: Ella ha escrito, не ha escrita. В Латинской Америке употребление perfecto и indefinido отличается; ориентируйся на регион и контекст."
+a2_02_01,a2_02,1,Правило: Pretérito indefinido,"Indefinido обозначает завершённые события прошлого. Hablar: hablé, hablaste, habló, hablamos, hablasteis, hablaron.
+Comer/vivir: comí, comiste, comió, comimos, comisteis, comieron; viví, viviste, vivió…"
+a2_02_02,a2_02,2,Примеры в контексте,"Ayer compré un libro — вчера я купил книгу. El año pasado viajamos a España — в прошлом году мы съездили в Испанию.
+Ser и ir совпадают: fui, fuiste, fue, fuimos, fuisteis, fueron. Значение определяется контекстом."
+a2_02_03,a2_02,3,На что обратить внимание,"У правильных глаголов ударение различает формы: hablo — я говорю, habló — он говорил. Частые неправильные основы: tener → tuve; estar → estuve; hacer → hice."
+a2_03_01,a2_03,1,Правило: Pretérito imperfecto,"Imperfecto описывает привычки, состояния и фон прошлого. Hablar: hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban.
+Comer/vivir: comía, comías, comía, comíamos, comíais, comían. Неправильных глаголов три: ser → era, ir → iba, ver → veía."
+a2_03_02,a2_03,2,Примеры в контексте,"De niño jugaba en el parque — в детстве я играл в парке. Hacía frío — было холодно. Eran las ocho — было восемь.
+Leía cuando sonó el teléfono — я читал, когда зазвонил телефон: фон + событие."
+a2_03_03,a2_03,3,На что обратить внимание,"Imperfecto не означает, что действие никогда не закончилось. Говорящий просто не выделяет его границы: описывает привычку или обстановку."
+a2_04_01,a2_04,1,Правило: Местоимения дополнения,"Прямое дополнение: me, te, lo/la, nos, os, los/las. Косвенное: me, te, le, nos, os, les.
+Порядок: косвенное + прямое + глагол. Le/les перед lo/la/los/las превращается в se: Se lo doy."
+a2_04_02,a2_04,2,Примеры в контексте,"Veo el libro → Lo veo. Doy el libro a Ana → Le doy el libro → Se lo doy.
+Местоимения стоят перед личным глаголом или после инфинитива: Lo voy a comprar / Voy a comprarlo."
+a2_04_03,a2_04,3,На что обратить внимание,"В se lo doy местоимение se заменяет le/les, а не обозначает возвратность. Не говори le lo doy. У личного прямого дополнения бывает предлог a: Veo a Ana → La veo."
+a2_05_01,a2_05,1,Правило: Будущее и планы,"Ближайшие планы: ir в presente + a + инфинитив: voy a estudiar. Futuro simple: инфинитив + é, ás, á, emos, éis, án.
+Hablaré — буду говорить. Comeremos — будем есть. Неправильные основы: tener → tendr-, hacer → har-, poder → podr-, salir → saldr-."
+a2_05_02,a2_05,2,Примеры в контексте,"Mañana voy a estudiar — завтра собираюсь заниматься. El año que viene viajaré — в следующем году поеду путешествовать.
+Для договорённости подходит и presente: Mañana salgo a las ocho."
+a2_05_03,a2_05,3,На что обратить внимание,"После voy a нужен инфинитив: voy a estudiar, не voy a estudio. Futuro также выражает предположение о настоящем: Serán las diez — наверное, сейчас десять."
+a2_06_01,a2_06,1,Правило: Сравнения и мнение,"Сравнение: más/menos + прилагательное + que. Равенство: tan + прилагательное + como; tanto/a/os/as + существительное + como.
+Неправильные сравнительные формы: bueno → mejor, malo → peor. Превосходная степень: el/la más… de."
+a2_06_02,a2_06,2,Примеры в контексте,"Madrid es más grande que Toledo — Мадрид больше Толедо. Ana es tan alta como Luis — Ана такого же роста, как Луис.
+Es el libro más interesante de la clase — это самая интересная книга в классе. Creo que es útil — думаю, это полезно."
+a2_06_03,a2_06,3,На что обратить внимание,"Не говори más mejor: mejor уже означает «лучше». Tan стоит перед прилагательным, tanto согласуется с существительным: tantos libros como…"
+b1_01_01,b1_01,1,Правило: Presente de subjuntivo,"Subjuntivo представляет действие как желаемое, сомнительное, оцениваемое или ещё не осуществившееся. Его выбор зависит от конструкции.
+Для правильных форм возьми основу yo presente: hablo → hable, hables, hable, hablemos, habléis, hablen; como → coma; vivo → viva."
+b1_01_02,b1_01,2,Примеры в контексте,"Espero que vengas — надеюсь, ты придёшь. Dudo que sea verdad — сомневаюсь, что это правда. No creo que tenga tiempo — не думаю, что у него есть время.
+Частые неправильные формы: ser → sea, ir → vaya, saber → sepa, haber → haya."
+b1_01_03,b1_01,3,На что обратить внимание,Que само по себе не требует subjuntivo: Creo que viene (утверждение) и No creo que venga (отрицание уверенности). Сначала определяй значение всей конструкции.
+b1_02_01,b1_02,1,"Правило: Желания, эмоции и советы","При разных субъектах после querer que, alegrarse de que, recomendar que используется subjuntivo. Quiero que estudies — хочу, чтобы ты учился.
+При одном субъекте обычно нужен инфинитив: Quiero estudiar — хочу учиться."
+b1_02_02,b1_02,2,Примеры в контексте,"Me alegra que estés aquí — рад, что ты здесь. Te recomiendo que descanses — советую тебе отдохнуть. Es importante que practiques — важно, чтобы ты практиковался.
+Ojalá + subjuntivo: Ojalá haga buen tiempo — хоть бы была хорошая погода."
+b1_02_03,b1_02,3,На что обратить внимание,"Subjuntivo возможен и для реального факта, если говорящий оценивает его: Me alegra que estés aquí. Не своди это наклонение к «нереальности»."
+b1_03_01,b1_03,1,Правило: Связная речь и союзы,"Porque вводит причину; por eso — следствие; pero — противопоставление; aunque — уступку; además — добавление.
+Para que + subjuntivo выражает цель при разных субъектах. При одном субъекте: para + инфинитив."
+b1_03_02,b1_03,2,Примеры в контексте,"Estudio porque me gusta — учусь, потому что нравится. Llueve; por eso me quedo en casa — дождь, поэтому остаюсь дома.
+Te lo explico para que lo entiendas — объясняю тебе это, чтобы ты понял. Estudio para aprender — учусь, чтобы узнавать новое."
+b1_03_03,b1_03,3,На что обратить внимание,"Не путай причину и цель: porque — почему, para que — для чего. Después de + инфинитив при одном субъекте: Después de comer, salgo."
+b1_04_01,b1_04,1,Правило: Condicional simple,"Condicional: инфинитив + ía, ías, ía, íamos, íais, ían. Hablaría — говорил бы. Неправильные основы совпадают с futuro: tendría, haría, podría.
+Это время подходит для вежливых просьб, гипотез и будущего относительно прошлого."
+b1_04_02,b1_04,2,Примеры в контексте,"¿Podrías ayudarme? — мог бы ты помочь? Me gustaría viajar — мне хотелось бы путешествовать. Dijo que vendría — он сказал, что придёт.
+Si tuviera tiempo, viajaría — если бы было время, я бы путешествовал."
+b1_04_03,b1_04,3,На что обратить внимание,"В нереальном условии condicional находится в результате, а после si — imperfecto de subjuntivo: Si tuviera…, haría… Не si tendría."
+b1_05_01,b1_05,1,Правило: Относительные предложения,"Que связывает существительное с описанием: El libro que leo. Quien/quienes относится к людям, часто после предлога: La persona con quien trabajo.
+Donde обозначает место. Cuyo/cuya/cuyos/cuyas передаёт принадлежность и согласуется с последующим существительным."
+b1_05_02,b1_05,2,Примеры в контексте,"La ciudad donde vivo es pequeña — город, где я живу, небольшой. El chico cuya madre es médica — мальчик, чья мама врач.
+Busco un libro que explique esto — ищу книгу, которая это объясняла бы: конкретная книга ещё не известна."
+b1_05_03,b1_05,3,На что обратить внимание,"Сравни: Tengo un libro que explica esto (известный объект, indicativo) и Busco un libro que explique esto (требование к неизвестному объекту, subjuntivo)."
+b1_06_01,b1_06,1,Правило: Система прошедших времён,"Pluscuamperfecto: imperfecto haber + причастие — había, habías, había, habíamos, habíais, habían. Оно обозначает действие раньше другого прошлого.
+Indefinido продвигает события, imperfecto описывает фон, pluscuamperfecto отсылает к предшествующему действию."
+b1_06_02,b1_06,2,Примеры в контексте,"Cuando llegué, Ana ya había salido — когда я пришёл, Ана уже ушла. Estaba cansado porque había trabajado mucho — был уставшим, потому что много работал.
+Ayer llovía cuando salí — вчера шёл дождь, когда я вышел."
+b1_06_03,b1_06,3,На что обратить внимание,Маркер ya сам по себе не выбирает время. Сначала найди точку отсчёта: уже к настоящему — he terminado; уже к прошлому моменту — había terminado.
+b2_01_01,b2_01,1,Правило: Прошедшие формы subjuntivo,"Imperfecto de subjuntivo образуется от ellos indefinido: hablaron → hablara/hablase; tuvieron → tuviera/tuviese.
+Perfecto de subjuntivo: haya + причастие. Pluscuamperfecto: hubiera/hubiese + причастие."
+b2_01_02,b2_01,2,Примеры в контексте,"Quería que vinieras — я хотел, чтобы ты пришёл. Me alegra que hayas venido — рад, что ты пришёл.
+Ojalá hubiera estudiado más — жаль, что я не занимался больше: желание о несостоявшемся прошлом."
+b2_01_03,b2_01,3,На что обратить внимание,При согласовании времён прошедший главный глагол обычно ведёт к imperfecto de subjuntivo. Формы на -ra и -se часто взаимозаменяемы: viniera/viniese.
+b2_02_01,b2_02,1,Правило: Сложные условия,"Реальное условие: si + presente de indicativo, затем presente/futuro/imperativo. Si tengo tiempo, iré.
+Нереальное настоящее: si + imperfecto de subjuntivo, condicional simple. Нереальное прошлое: si + pluscuamperfecto de subjuntivo, condicional compuesto."
+b2_02_02,b2_02,2,Примеры в контексте,"Si tuviera dinero, viajaría — если бы были деньги, путешествовал бы. Si hubiera estudiado, habría aprobado — если бы позанимался, сдал бы.
+Смешанное условие: Si hubiera dormido, ahora estaría mejor — если бы выспался, сейчас чувствовал бы себя лучше."
+b2_02_03,b2_02,3,На что обратить внимание,"В обычном условии после si не ставят futuro или condicional: si tengo, не si tendré. Это правило не относится к косвенному вопросу No sé si vendrá."
+b2_03_01,b2_03,1,Правило: Косвенная речь,"При прошедшем глаголе сообщения времена часто смещаются: presente → imperfecto, perfecto/indefinido → pluscuamperfecto, futuro → condicional.
+Местоимения и указатели времени меняются согласно ситуации: hoy → ese día, mañana → al día siguiente."
+b2_03_02,b2_03,2,Примеры в контексте,"«Estoy cansado» → Dijo que estaba cansado. «Vendré mañana» → Dijo que vendría al día siguiente.
+Вопрос да/нет вводит si: «¿Vienes?» → Preguntó si venía. Приказ передаётся с subjuntivo: Me dijo que viniera."
+b2_03_03,b2_03,3,На что обратить внимание,"Сдвиг времени не механический. Если содержание остаётся актуальным, возможен presente: Dijo que vive en Madrid. Всегда учитывай точку отсчёта и ситуацию сообщения."
+b2_04_01,b2_04,1,Правило: Глагольные перифразы,"Acabar de + инфинитив обозначает недавнее действие; volver a — повтор; dejar de — прекращение; seguir + gerundio — продолжение.
+Llevar + срок + gerundio сообщает, сколько времени длится действие: Llevo dos años estudiando español."
+b2_04_02,b2_04,2,Примеры в контексте,"Acabo de llegar — я только что пришёл. Vuelvo a leer el texto — снова читаю текст. Sigue lloviendo — дождь всё ещё идёт.
+Dejó de fumar — он бросил курить. Debe de estar en casa — вероятно, он дома."
+b2_04_03,b2_04,3,На что обратить внимание,"Различай tener que (необходимость), deber (обязанность или вероятность по контексту), deber de (обычно предположение). После seguir нужен gerundio, а не инфинитив."
+b2_05_01,b2_05,1,Правило: Аргументация и уступка,"Sin embargo и no obstante вводят возражение; por lo tanto — вывод; en cambio — сопоставление; de hecho — подтверждение.
+Aunque + indicativo представляет факт; aunque + subjuntivo может представлять допущение или информацию, не влияющую на вывод."
+b2_05_02,b2_05,2,Примеры в контексте,"Es caro; sin embargo, vale la pena — дорого, однако стоит того. No estudió; por lo tanto, no aprobó — не учился, следовательно, не сдал.
+Aunque llueva mañana, saldré — даже если завтра будет дождь, я выйду. Aunque está lloviendo, salgo — хотя идёт дождь, я выхожу."
+b2_05_03,b2_05,3,На что обратить внимание,"Не выбирай наклонение после aunque по одному слову. Сравни факт, допущение и то, какую информацию собеседник уже знает. Союз должен отражать реальную связь аргументов."
+b2_06_01,b2_06,1,Правило: Точность и регистр,"В формальной речи вежливость выражают condicional и устойчивые конструкции: Le agradecería que…, ¿Sería tan amable de…?
+Безличное se сочетается с глаголом в единственном числе: Se vive bien aquí. В пассивной конструкции с se глагол согласуется с подлежащим: Se venden libros."
+b2_06_02,b2_06,2,Примеры в контексте,"Le agradecería que me enviara el documento — был бы признателен, если бы вы прислали документ. Se venden pisos — продаются квартиры.
+Se busca a los responsables — ищут ответственных: с личным дополнением a это безличная конструкция, глагол единственного числа."
+b2_06_03,b2_06,3,На что обратить внимание,"Выбирай tú или usted последовательно. В деловом письме избегай разговорных сокращений, но не усложняй текст без необходимости. Различай pasiva refleja и impersonal по структуре, а не переводу."

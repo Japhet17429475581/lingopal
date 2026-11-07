@@ -1,0 +1,145 @@
+id,block_id,question_type,payload,explanation
+a1_01_q01,a1_01,choice,"{""question"": ""___ casa es blanca."", ""options"": [""La"", ""El"", ""Los""], ""correct"": ""La""}",Casa — женского рода и единственного числа: la casa.
+a1_01_q02,a1_01,choice,"{""question"": ""Множественное число: el libro → …"", ""options"": [""los libros"", ""las libros"", ""el libros""], ""correct"": ""los libros""}","Меняются и артикль, и существительное: los libros."
+a1_01_q03,a1_01,choice,"{""question"": ""Как сказать «я»?"", ""options"": [""yo"", ""tú"", ""ellos""], ""correct"": ""yo""}","Yo — я, tú — ты, ellos — они."
+a1_01_q04,a1_01,boolean,"{""question"": ""«La mano» — правильное сочетание."", ""correct"": true}",Mano — исключение: женский род при окончании -o.
+a1_01_q05,a1_01,boolean,"{""question"": ""С usted используют форму глагола для tú."", ""correct"": false}",Usted сочетается с третьим лицом: usted habla.
+a1_01_q06,a1_01,constructor,"{""question"": ""Собери: «Дом белый»."", ""words"": [""La"", ""casa"", ""es"", ""blanca""], ""correct_order"": [""La"", ""casa"", ""es"", ""blanca""]}",Правильный порядок: La casa es blanca.
+a1_02_q01,a1_02,choice,"{""question"": ""Yo ___ estudiante."", ""options"": [""soy"", ""eres"", ""son""], ""correct"": ""soy""}",С yo используется soy.
+a1_02_q02,a1_02,choice,"{""question"": ""Nosotros ___ de México."", ""options"": [""somos"", ""son"", ""sois""], ""correct"": ""somos""}",Nosotros → somos.
+a1_02_q03,a1_02,choice,"{""question"": ""Она врач: Ella ___ médica."", ""options"": [""es"", ""está"", ""eres""], ""correct"": ""es""}",Профессию обозначают с ser: es médica.
+a1_02_q04,a1_02,boolean,"{""question"": ""«Soy de Madrid» сообщает о происхождении."", ""correct"": true}",Ser de + место — происходить откуда-то.
+a1_02_q05,a1_02,boolean,"{""question"": ""Правильно: «Tú soy estudiante»."", ""correct"": false}",Для tú нужна форма eres: Tú eres estudiante.
+a1_02_q06,a1_02,constructor,"{""question"": ""Собери: «Мы из Мадрида»."", ""words"": [""Nosotros"", ""somos"", ""de"", ""Madrid""], ""correct_order"": [""Nosotros"", ""somos"", ""de"", ""Madrid""]}",Правильный порядок: Nosotros somos de Madrid.
+a1_03_q01,a1_03,choice,"{""question"": ""Yo ___ en casa."", ""options"": [""estoy"", ""soy"", ""están""], ""correct"": ""estoy""}",Местоположение + yo: estoy.
+a1_03_q02,a1_03,choice,"{""question"": ""___ una farmacia cerca."", ""options"": [""Hay"", ""Está"", ""Son""], ""correct"": ""Hay""}",Наличие впервые упоминаемого предмета обозначают hay.
+a1_03_q03,a1_03,choice,"{""question"": ""Они устали: Ellos ___ cansados."", ""options"": [""están"", ""son"", ""estás""], ""correct"": ""están""}",Состояние + ellos: están cansados.
+a1_03_q04,a1_03,boolean,"{""question"": ""«El libro está en la mesa» описывает местоположение."", ""correct"": true}",Для места известного предмета нужен estar.
+a1_03_q05,a1_03,boolean,"{""question"": ""«Estoy de Rusia» — обычный способ сообщить о происхождении."", ""correct"": false}",О происхождении говорят Soy de Rusia.
+a1_03_q06,a1_03,constructor,"{""question"": ""Собери: «Ана дома»."", ""words"": [""Ana"", ""está"", ""en"", ""casa""], ""correct_order"": [""Ana"", ""está"", ""en"", ""casa""]}",Правильный порядок: Ana está en casa.
+a1_04_q01,a1_04,choice,"{""question"": ""Yo ___ español. (hablar)"", ""options"": [""hablo"", ""hablas"", ""habla""], ""correct"": ""hablo""}",У -ar в первом лице окончание -o: hablo.
+a1_04_q02,a1_04,choice,"{""question"": ""Nosotros ___ pan. (comer)"", ""options"": [""comemos"", ""comimos"", ""comen""], ""correct"": ""comemos""}","Presente, nosotros, -er: comemos."
+a1_04_q03,a1_04,choice,"{""question"": ""Ellos ___ en Madrid. (vivir)"", ""options"": [""viven"", ""vivimos"", ""vive""], ""correct"": ""viven""}",Ellos + vivir → viven.
+a1_04_q04,a1_04,boolean,"{""question"": ""«Estudiamos» может быть формой presente для nosotros."", ""correct"": true}",Для nosotros у -ar в presente окончание -amos.
+a1_04_q05,a1_04,boolean,"{""question"": ""У tú форма глагола comer — «como»."", ""correct"": false}",Tú comes; yo como.
+a1_04_q06,a1_04,constructor,"{""question"": ""Собери: «Я учу испанский каждый день»."", ""words"": [""Yo"", ""estudio"", ""español"", ""cada"", ""día""], ""correct_order"": [""Yo"", ""estudio"", ""español"", ""cada"", ""día""]}",Правильный порядок: Yo estudio español cada día.
+a1_05_q01,a1_05,choice,"{""question"": ""Yo ___ levanto a las siete."", ""options"": [""me"", ""te"", ""se""], ""correct"": ""me""}",С yo используется возвратное me.
+a1_05_q02,a1_05,choice,"{""question"": ""Nosotros ___ duchamos."", ""options"": [""nos"", ""se"", ""os""], ""correct"": ""nos""}",Nosotros → nos duchamos.
+a1_05_q03,a1_05,choice,"{""question"": ""Me lavo ___ manos."", ""options"": [""las"", ""mis las"", ""los""], ""correct"": ""las""}",Для частей тела при возвратном глаголе: las manos.
+a1_05_q04,a1_05,boolean,"{""question"": ""«Voy a levantarme» — правильная конструкция."", ""correct"": true}",Местоимение можно присоединить к инфинитиву.
+a1_05_q05,a1_05,boolean,"{""question"": ""Правильно: «Yo se levanto»."", ""correct"": false}",Yo me levanto: местоимение должно согласовываться с yo.
+a1_05_q06,a1_05,constructor,"{""question"": ""Собери: «Я встаю в семь»."", ""words"": [""Me"", ""levanto"", ""a"", ""las"", ""siete""], ""correct_order"": [""Me"", ""levanto"", ""a"", ""las"", ""siete""]}",Правильный порядок: Me levanto a las siete.
+a1_06_q01,a1_06,choice,"{""question"": ""___ vives? — Где ты живёшь?"", ""options"": [""¿Dónde"", ""¿Cuándo"", ""¿Quién""], ""correct"": ""¿Dónde""}",Dónde спрашивает о месте.
+a1_06_q02,a1_06,choice,"{""question"": ""Я не говорю по-французски."", ""options"": [""No hablo francés"", ""Hablo no francés"", ""No hablar francés""], ""correct"": ""No hablo francés""}",No ставят перед личным глаголом.
+a1_06_q03,a1_06,choice,"{""question"": ""¿Por qué estudias? — ___ me gusta."", ""options"": [""Porque"", ""Por qué"", ""Dónde""], ""correct"": ""Porque""}",Союз причины porque пишется слитно.
+a1_06_q04,a1_06,boolean,"{""question"": ""«No veo a nadie» — грамматически верно."", ""correct"": true}",В испанском такое двойное отрицание нормально.
+a1_06_q05,a1_06,boolean,"{""question"": ""Вопросительное «como» пишется без ударения."", ""correct"": false}",Вопросительное cómo пишется с ударением.
+a1_06_q06,a1_06,constructor,"{""question"": ""Собери: «Я не говорю по-французски»."", ""words"": [""No"", ""hablo"", ""francés""], ""correct_order"": [""No"", ""hablo"", ""francés""]}",Правильный порядок: No hablo francés.
+a2_01_q01,a2_01,choice,"{""question"": ""Hoy yo ___ estudiado."", ""options"": [""he"", ""has"", ""ha""], ""correct"": ""he""}",Yo → he + participio.
+a2_01_q02,a2_01,choice,"{""question"": ""Причастие escribir:"", ""options"": [""escrito"", ""escribido"", ""escribiendo""], ""correct"": ""escrito""}",Escribir имеет неправильное причастие escrito.
+a2_01_q03,a2_01,choice,"{""question"": ""Ella ha ___ una carta."", ""options"": [""escrito"", ""escrita"", ""escribió""], ""correct"": ""escrito""}",С haber причастие неизменно.
+a2_01_q04,a2_01,boolean,"{""question"": ""«Hemos comido» — форма pretérito perfecto."", ""correct"": true}",Hemos + причастие comido.
+a2_01_q05,a2_01,boolean,"{""question"": ""Причастие hacer — «hacido»."", ""correct"": false}",Правильное причастие — hecho.
+a2_01_q06,a2_01,constructor,"{""question"": ""Собери: «Сегодня я позанимался испанским»."", ""words"": [""Hoy"", ""he"", ""estudiado"", ""español""], ""correct_order"": [""Hoy"", ""he"", ""estudiado"", ""español""]}",Правильный порядок: Hoy he estudiado español.
+a2_02_q01,a2_02,choice,"{""question"": ""Ayer yo ___ un libro. (comprar)"", ""options"": [""compré"", ""compro"", ""compraba""], ""correct"": ""compré""}",Завершённое событие ayer: compré.
+a2_02_q02,a2_02,choice,"{""question"": ""Indefinido от ir для yo:"", ""options"": [""fui"", ""iba"", ""voy""], ""correct"": ""fui""}",Yo fui — я пошёл/поехал.
+a2_02_q03,a2_02,choice,"{""question"": ""Ella ___ con Ana ayer. (hablar)"", ""options"": [""habló"", ""hablo"", ""hablas""], ""correct"": ""habló""}",Ella + indefinido: habló с ударением.
+a2_02_q04,a2_02,boolean,"{""question"": ""«Fui» может быть формой ser или ir."", ""correct"": true}",Эти глаголы совпадают в indefinido.
+a2_02_q05,a2_02,boolean,"{""question"": ""«Habló» и «hablo» обозначают одно и то же лицо и время."", ""correct"": false}","Habló — él/ella в прошлом, hablo — yo в настоящем."
+a2_02_q06,a2_02,constructor,"{""question"": ""Собери: «Вчера я купил книгу»."", ""words"": [""Ayer"", ""compré"", ""un"", ""libro""], ""correct_order"": [""Ayer"", ""compré"", ""un"", ""libro""]}",Правильный порядок: Ayer compré un libro.
+a2_03_q01,a2_03,choice,"{""question"": ""De niño yo ___ en el parque. (jugar)"", ""options"": [""jugaba"", ""jugué"", ""juego""], ""correct"": ""jugaba""}",Повторявшаяся привычка в детстве → imperfecto.
+a2_03_q02,a2_03,choice,"{""question"": ""Imperfecto от ir для yo:"", ""options"": [""iba"", ""fui"", ""iré""], ""correct"": ""iba""}",Ir — неправильный: iba.
+a2_03_q03,a2_03,choice,"{""question"": ""___ las ocho cuando llegó Ana."", ""options"": [""Eran"", ""Fueron"", ""Son""], ""correct"": ""Eran""}",Время как фон прошлого: eran las ocho.
+a2_03_q04,a2_03,boolean,"{""question"": ""«Leía cuando sonó el teléfono» сочетает фон и событие."", ""correct"": true}","Leía — фон, sonó — событие."
+a2_03_q05,a2_03,boolean,"{""question"": ""Imperfecto глагола ser — «seraba»."", ""correct"": false}","Ser → era, eras, era, éramos, erais, eran."
+a2_03_q06,a2_03,constructor,"{""question"": ""Собери: «В детстве я играл в парке»."", ""words"": [""De"", ""niño"", ""jugaba"", ""en"", ""el"", ""parque""], ""correct_order"": [""De"", ""niño"", ""jugaba"", ""en"", ""el"", ""parque""]}",Правильный порядок: De niño jugaba en el parque.
+a2_04_q01,a2_04,choice,"{""question"": ""Veo la casa → ___ veo."", ""options"": [""La"", ""Lo"", ""Le""], ""correct"": ""La""}",Casa — прямое дополнение женского рода: la.
+a2_04_q02,a2_04,choice,"{""question"": ""Doy el libro a Ana → ___ doy."", ""options"": [""Se lo"", ""Le lo"", ""Lo le""], ""correct"": ""Se lo""}",Le перед lo меняется на se.
+a2_04_q03,a2_04,choice,"{""question"": ""Voy a comprar el libro → Voy a ___ ."", ""options"": [""comprarlo"", ""lo comprar"", ""comprarle lo""], ""correct"": ""comprarlo""}",Lo можно присоединить к инфинитиву.
+a2_04_q04,a2_04,boolean,"{""question"": ""«Se lo doy» может означать «я даю это ей»."", ""correct"": true}","Se здесь заменяет le, lo — прямое дополнение."
+a2_04_q05,a2_04,boolean,"{""question"": ""«Le lo doy» — стандартный порядок местоимений."", ""correct"": false}",Нужно se lo doy.
+a2_04_q06,a2_04,constructor,"{""question"": ""Собери: «Я даю это ему/ей» (с двумя местоимениями)."", ""words"": [""Se"", ""lo"", ""doy""], ""correct_order"": [""Se"", ""lo"", ""doy""]}",Правильный порядок: Se lo doy.
+a2_05_q01,a2_05,choice,"{""question"": ""Mañana voy a ___ ."", ""options"": [""estudiar"", ""estudio"", ""estudiaré""], ""correct"": ""estudiar""}",После ir a употребляют инфинитив.
+a2_05_q02,a2_05,choice,"{""question"": ""Futuro от tener для yo:"", ""options"": [""tendré"", ""teneré"", ""tenía""], ""correct"": ""tendré""}",Неправильная основа tendr- + é.
+a2_05_q03,a2_05,choice,"{""question"": ""Nosotros ___ mañana. (viajar, futuro)"", ""options"": [""viajaremos"", ""viajarán"", ""viajáis""], ""correct"": ""viajaremos""}",Инфинитив viajar + emos.
+a2_05_q04,a2_05,boolean,"{""question"": ""«Voy a estudiar» может выражать план."", ""correct"": true}",Ir a + инфинитив — обычная конструкция намерения.
+a2_05_q05,a2_05,boolean,"{""question"": ""Futuro всегда обозначает только будущее время."", ""correct"": false}",Оно также выражает предположение о настоящем.
+a2_05_q06,a2_05,constructor,"{""question"": ""Собери: «Завтра я собираюсь заниматься»."", ""words"": [""Mañana"", ""voy"", ""a"", ""estudiar""], ""correct_order"": [""Mañana"", ""voy"", ""a"", ""estudiar""]}",Правильный порядок: Mañana voy a estudiar.
+a2_06_q01,a2_06,choice,"{""question"": ""Ana es más alta ___ Luis."", ""options"": [""que"", ""como"", ""de""], ""correct"": ""que""}",Неравенство: más… que.
+a2_06_q02,a2_06,choice,"{""question"": ""Этот вариант лучше: Esta opción es ___ ."", ""options"": [""mejor"", ""más mejor"", ""tan mejor""], ""correct"": ""mejor""}",Mejor не требует más.
+a2_06_q03,a2_06,choice,"{""question"": ""Tengo ___ libros como tú."", ""options"": [""tantos"", ""tan"", ""tanto""], ""correct"": ""tantos""}",Tantos согласуется с libros.
+a2_06_q04,a2_06,boolean,"{""question"": ""«Tan alto como» выражает равенство."", ""correct"": true}",Tan + прилагательное + como.
+a2_06_q05,a2_06,boolean,"{""question"": ""«Más mejor» — обычная нормативная сравнительная форма."", ""correct"": false}",Нормативная форма — mejor.
+a2_06_q06,a2_06,constructor,"{""question"": ""Собери: «Ана такого же роста, как Луис»."", ""words"": [""Ana"", ""es"", ""tan"", ""alta"", ""como"", ""Luis""], ""correct_order"": [""Ana"", ""es"", ""tan"", ""alta"", ""como"", ""Luis""]}",Правильный порядок: Ana es tan alta como Luis.
+b1_01_q01,b1_01,choice,"{""question"": ""Espero que tú ___ . (venir)"", ""options"": [""vengas"", ""vienes"", ""vendrás""], ""correct"": ""vengas""}",Espero que + subjuntivo при разных субъектах.
+b1_01_q02,b1_01,choice,"{""question"": ""Presente de subjuntivo: yo, hablar."", ""options"": [""hable"", ""hablo"", ""hablé""], ""correct"": ""hable""}",Основа habl- + e.
+b1_01_q03,b1_01,choice,"{""question"": ""No creo que ___ verdad."", ""options"": [""sea"", ""es"", ""será""], ""correct"": ""sea""}",No creo que обычно вводит subjuntivo.
+b1_01_q04,b1_01,boolean,"{""question"": ""«Creo que viene» может стоять в indicativo."", ""correct"": true}",Утвердительное мнение обычно использует indicativo.
+b1_01_q05,b1_01,boolean,"{""question"": ""Любое que автоматически требует subjuntivo."", ""correct"": false}","Выбор зависит от значения конструкции, а не от одного que."
+b1_01_q06,b1_01,constructor,"{""question"": ""Собери: «Надеюсь, ты придёшь»."", ""words"": [""Espero"", ""que"", ""vengas""], ""correct_order"": [""Espero"", ""que"", ""vengas""]}",Правильный порядок: Espero que vengas.
+b1_02_q01,b1_02,choice,"{""question"": ""Хочу учиться: Quiero ___ ."", ""options"": [""estudiar"", ""que estudio"", ""estudie""], ""correct"": ""estudiar""}",Один субъект → инфинитив.
+b1_02_q02,b1_02,choice,"{""question"": ""Te recomiendo que ___ . (descansar)"", ""options"": [""descanses"", ""descansas"", ""descansarás""], ""correct"": ""descanses""}",Совет другому человеку → subjuntivo.
+b1_02_q03,b1_02,choice,"{""question"": ""Me alegra que ___ aquí. (tú)"", ""options"": [""estés"", ""estás"", ""estar""], ""correct"": ""estés""}",Эмоциональная оценка → subjuntivo.
+b1_02_q04,b1_02,boolean,"{""question"": ""«Quiero que vengas» предполагает разных субъектов."", ""correct"": true}","Я хочу, чтобы ты пришёл."
+b1_02_q05,b1_02,boolean,"{""question"": ""Subjuntivo не может описывать реальный факт."", ""correct"": false}",Он используется и для оценки известного факта.
+b1_02_q06,b1_02,constructor,"{""question"": ""Собери: «Советую тебе отдохнуть»."", ""words"": [""Te"", ""recomiendo"", ""que"", ""descanses""], ""correct_order"": [""Te"", ""recomiendo"", ""que"", ""descanses""]}",Правильный порядок: Te recomiendo que descanses.
+b1_03_q01,b1_03,choice,"{""question"": ""Llueve; ___ me quedo en casa."", ""options"": [""por eso"", ""porque"", ""para que""], ""correct"": ""por eso""}",Вторая часть выражает следствие.
+b1_03_q02,b1_03,choice,"{""question"": ""Te ayudo para que ___ . (aprender)"", ""options"": [""aprendas"", ""aprendes"", ""aprenderás""], ""correct"": ""aprendas""}",Цель с разными субъектами → subjuntivo.
+b1_03_q03,b1_03,choice,"{""question"": ""Estudio ___ aprender."", ""options"": [""para"", ""porque"", ""por eso""], ""correct"": ""para""}",Один субъект: para + инфинитив.
+b1_03_q04,b1_03,boolean,"{""question"": ""«Además» добавляет аргумент."", ""correct"": true}",Además означает «кроме того».
+b1_03_q05,b1_03,boolean,"{""question"": ""«Porque» и «por eso» всегда взаимозаменяемы."", ""correct"": false}","Porque вводит причину, por eso — следствие."
+b1_03_q06,b1_03,constructor,"{""question"": ""Собери: «Учусь, потому что мне нравится»."", ""words"": [""Estudio"", ""porque"", ""me"", ""gusta""], ""correct_order"": [""Estudio"", ""porque"", ""me"", ""gusta""]}",Правильный порядок: Estudio porque me gusta.
+b1_04_q01,b1_04,choice,"{""question"": ""Me ___ viajar. (gustar)"", ""options"": [""gustaría"", ""gustaré"", ""gustaba""], ""correct"": ""gustaría""}",Вежливое желание: me gustaría.
+b1_04_q02,b1_04,choice,"{""question"": ""Condicional глагола poder, tú:"", ""options"": [""podrías"", ""poderías"", ""podrás""], ""correct"": ""podrías""}",Неправильная основа podr- + ías.
+b1_04_q03,b1_04,choice,"{""question"": ""Dijo que ___ mañana. (venir, будущее в прошлом)"", ""options"": [""vendría"", ""viene"", ""vino""], ""correct"": ""vendría""}",Будущее относительно dijo выражается condicional.
+b1_04_q04,b1_04,boolean,"{""question"": ""«¿Podrías ayudarme?» — вежливая просьба."", ""correct"": true}",Condicional смягчает просьбу.
+b1_04_q05,b1_04,boolean,"{""question"": ""Нормативно: «Si tendría tiempo, viajaría»."", ""correct"": false}","Нужно Si tuviera tiempo, viajaría."
+b1_04_q06,b1_04,constructor,"{""question"": ""Собери: «Мне хотелось бы путешествовать»."", ""words"": [""Me"", ""gustaría"", ""viajar""], ""correct_order"": [""Me"", ""gustaría"", ""viajar""]}",Правильный порядок: Me gustaría viajar.
+b1_05_q01,b1_05,choice,"{""question"": ""La ciudad ___ vivo es pequeña."", ""options"": [""donde"", ""quien"", ""cuyo""], ""correct"": ""donde""}",Место → donde.
+b1_05_q02,b1_05,choice,"{""question"": ""El chico ___ madre es médica."", ""options"": [""cuya"", ""cuyo"", ""quien""], ""correct"": ""cuya""}",Cuya согласуется с madre.
+b1_05_q03,b1_05,choice,"{""question"": ""Busco un libro que ___ esto. (ещё не знаю, есть ли он)"", ""options"": [""explique"", ""explica"", ""explicó""], ""correct"": ""explique""}",Неопределённый искомый объект → subjuntivo.
+b1_05_q04,b1_05,boolean,"{""question"": ""«Con quien trabajo» может относиться к человеку."", ""correct"": true}","Quien употребляется с людьми, здесь после con."
+b1_05_q05,b1_05,boolean,"{""question"": ""Cuyo согласуется с владельцем, а не с предметом владения."", ""correct"": false}",Согласование идёт со следующим существительным: cuya madre.
+b1_05_q06,b1_05,constructor,"{""question"": ""Собери: «Город, где я живу, небольшой»."", ""words"": [""La"", ""ciudad"", ""donde"", ""vivo"", ""es"", ""pequeña""], ""correct_order"": [""La"", ""ciudad"", ""donde"", ""vivo"", ""es"", ""pequeña""]}",Правильный порядок: La ciudad donde vivo es pequeña.
+b1_06_q01,b1_06,choice,"{""question"": ""Cuando llegué, Ana ya ___ salido."", ""options"": [""había"", ""ha"", ""habrá""], ""correct"": ""había""}",Выход Аны предшествовал моему приходу.
+b1_06_q02,b1_06,choice,"{""question"": ""Pluscuamperfecto: nosotros, comer."", ""options"": [""habíamos comido"", ""hemos comido"", ""habremos comido""], ""correct"": ""habíamos comido""}",Imperfecto haber + participio.
+b1_06_q03,b1_06,choice,"{""question"": ""Leía cuando ___ el teléfono. (завершённый звонок)"", ""options"": [""sonó"", ""sonaba"", ""suena""], ""correct"": ""sonó""}",Отдельное событие на фоне leía → indefinido.
+b1_06_q04,b1_06,boolean,"{""question"": ""«Había salido» обозначает предшествование прошлому моменту."", ""correct"": true}",Это основная функция pluscuamperfecto.
+b1_06_q05,b1_06,boolean,"{""question"": ""Одно слово ya всегда требует pluscuamperfecto."", ""correct"": false}",Время зависит от точки отсчёта и смысла.
+b1_06_q06,b1_06,constructor,"{""question"": ""Собери: «Ана уже ушла» (к прошлому моменту)."", ""words"": [""Ana"", ""ya"", ""había"", ""salido""], ""correct_order"": [""Ana"", ""ya"", ""había"", ""salido""]}",Правильный порядок: Ana ya había salido.
+b2_01_q01,b2_01,choice,"{""question"": ""Quería que tú ___ . (venir)"", ""options"": [""vinieras"", ""vienes"", ""vendrás""], ""correct"": ""vinieras""}",Желание в прошлом → imperfecto de subjuntivo.
+b2_01_q02,b2_01,choice,"{""question"": ""Me alegra que ___ venido."", ""options"": [""hayas"", ""has"", ""habías""], ""correct"": ""hayas""}",Оценка предшествующего действия: hayas venido.
+b2_01_q03,b2_01,choice,"{""question"": ""Imperfecto de subjuntivo от tener:"", ""options"": [""tuviera"", ""teniera"", ""tendría""], ""correct"": ""tuviera""}",От tuvieron убираем -ron и добавляем -ra.
+b2_01_q04,b2_01,boolean,"{""question"": ""«Hablara» и «hablase» часто взаимозаменяемы."", ""correct"": true}",Обе формы относятся к imperfecto de subjuntivo.
+b2_01_q05,b2_01,boolean,"{""question"": ""«Hubiera estudiado» — presente de indicativo."", ""correct"": false}",Это pluscuamperfecto de subjuntivo.
+b2_01_q06,b2_01,constructor,"{""question"": ""Собери: «Я хотел, чтобы ты пришёл»."", ""words"": [""Quería"", ""que"", ""vinieras""], ""correct_order"": [""Quería"", ""que"", ""vinieras""]}",Правильный порядок: Quería que vinieras.
+b2_02_q01,b2_02,choice,"{""question"": ""Si ___ tiempo mañana, iré. (tener)"", ""options"": [""tengo"", ""tendré"", ""tendría""], ""correct"": ""tengo""}",Реальное будущее условие: si + presente.
+b2_02_q02,b2_02,choice,"{""question"": ""Si tuviera dinero, ___ ."", ""options"": [""viajaría"", ""viajaré"", ""viajaba""], ""correct"": ""viajaría""}",Нереальное настоящее → condicional simple в результате.
+b2_02_q03,b2_02,choice,"{""question"": ""Si hubiera estudiado, ___ aprobado."", ""options"": [""habría"", ""habré"", ""había""], ""correct"": ""habría""}",Нереальный результат прошлого → habría + participio.
+b2_02_q04,b2_02,boolean,"{""question"": ""«Si hubiera dormido, ahora estaría mejor» — смешанное условие."", ""correct"": true}","Причина относится к прошлому, результат — к настоящему."
+b2_02_q05,b2_02,boolean,"{""question"": ""В обычном будущем условии нормативно «si tendré tiempo»."", ""correct"": false}",Нужно si tengo tiempo.
+b2_02_q06,b2_02,constructor,"{""question"": ""Собери: «Если бы были деньги, я бы путешествовал»."", ""words"": [""Si"", ""tuviera"", ""dinero"", ""viajaría""], ""correct_order"": [""Si"", ""tuviera"", ""dinero"", ""viajaría""]}",Правильный порядок: Si tuviera dinero viajaría.
+b2_03_q01,b2_03,choice,"{""question"": ""«Vendré» → Dijo que ___ ."", ""options"": [""vendría"", ""vino"", ""venía""], ""correct"": ""vendría""}",Будущее в косвенной речи после dijo → condicional.
+b2_03_q02,b2_03,choice,"{""question"": ""Вопрос «¿Vienes?» → Preguntó ___ venía."", ""options"": [""si"", ""que"", ""porque""], ""correct"": ""si""}",Косвенный вопрос да/нет вводится si.
+b2_03_q03,b2_03,choice,"{""question"": ""Приказ «Ven» → Me dijo que ___ ."", ""options"": [""viniera"", ""vengo"", ""vendré""], ""correct"": ""viniera""}",Передача приказа после dijo → imperfecto de subjuntivo.
+b2_03_q04,b2_03,boolean,"{""question"": ""В косвенной речи mañana может стать al día siguiente."", ""correct"": true}",Указатель времени меняется при смене точки отсчёта.
+b2_03_q05,b2_03,boolean,"{""question"": ""После dijo настоящее время запрещено во всех случаях."", ""correct"": false}","Presente возможно, если сообщение остаётся актуальным."
+b2_03_q06,b2_03,constructor,"{""question"": ""Передай «Estoy cansado» после Dijo que…"", ""words"": [""Dijo"", ""que"", ""estaba"", ""cansado""], ""correct_order"": [""Dijo"", ""que"", ""estaba"", ""cansado""]}",Правильный порядок: Dijo que estaba cansado.
+b2_04_q01,b2_04,choice,"{""question"": ""Я только что пришёл: Acabo de ___ ."", ""options"": [""llegar"", ""llegando"", ""llegado""], ""correct"": ""llegar""}",Acabar de + infinitivo.
+b2_04_q02,b2_04,choice,"{""question"": ""Дождь всё ещё идёт: Sigue ___ ."", ""options"": [""lloviendo"", ""llover"", ""llovido""], ""correct"": ""lloviendo""}",Seguir + gerundio выражает продолжение.
+b2_04_q03,b2_04,choice,"{""question"": ""Llevo dos años ___ español."", ""options"": [""estudiando"", ""estudiar"", ""estudiado""], ""correct"": ""estudiando""}",Llevar + время + gerundio.
+b2_04_q04,b2_04,boolean,"{""question"": ""«Volver a leer» означает прочитать снова."", ""correct"": true}",Volver a выражает повтор действия.
+b2_04_q05,b2_04,boolean,"{""question"": ""«Dejar de fumar» означает начать курить."", ""correct"": false}","Dejar de — прекратить, значит бросить курить."
+b2_04_q06,b2_04,constructor,"{""question"": ""Собери: «Я только что пришёл»."", ""words"": [""Acabo"", ""de"", ""llegar""], ""correct_order"": [""Acabo"", ""de"", ""llegar""]}",Правильный порядок: Acabo de llegar.
+b2_05_q01,b2_05,choice,"{""question"": ""Es caro; ___, vale la pena. (возражение)"", ""options"": [""sin embargo"", ""por lo tanto"", ""porque""], ""correct"": ""sin embargo""}",Нужен маркер противопоставления.
+b2_05_q02,b2_05,choice,"{""question"": ""Aunque ___ mañana, saldré. (допущение)"", ""options"": [""llueva"", ""llueve"", ""llovió""], ""correct"": ""llueva""}",Будущее допущение → subjuntivo.
+b2_05_q03,b2_05,choice,"{""question"": ""No estudió; ___, no aprobó. (вывод)"", ""options"": [""por lo tanto"", ""en cambio"", ""aunque""], ""correct"": ""por lo tanto""}",Por lo tanto вводит следствие или вывод.
+b2_05_q04,b2_05,boolean,"{""question"": ""«En cambio» может сопоставлять два разных случая."", ""correct"": true}",Этот маркер подчёркивает различие.
+b2_05_q05,b2_05,boolean,"{""question"": ""После aunque всегда нужен только indicativo."", ""correct"": false}",В зависимости от смысла возможно и subjuntivo.
+b2_05_q06,b2_05,constructor,"{""question"": ""Собери: «Даже если завтра будет дождь, я выйду»."", ""words"": [""Aunque"", ""llueva"", ""mañana"", ""saldré""], ""correct_order"": [""Aunque"", ""llueva"", ""mañana"", ""saldré""]}",Правильный порядок: Aunque llueva mañana saldré.
+b2_06_q01,b2_06,choice,"{""question"": ""___ venden libros."", ""options"": [""Se"", ""Lo"", ""Les""], ""correct"": ""Se""}",Пассивная конструкция: se venden libros.
+b2_06_q02,b2_06,choice,"{""question"": ""Se ___ pisos. (vender)"", ""options"": [""venden"", ""vende"", ""vendiendo""], ""correct"": ""venden""}",В pasiva refleja глагол согласуется с pisos.
+b2_06_q03,b2_06,choice,"{""question"": ""Le agradecería que me ___ el documento."", ""options"": [""enviara"", ""envía"", ""enviará""], ""correct"": ""enviara""}",Вежливый запрос с condicional → imperfecto de subjuntivo.
+b2_06_q04,b2_06,boolean,"{""question"": ""«Se vive bien aquí» — безличная конструкция."", ""correct"": true}","Нет конкретного подлежащего, глагол в единственном числе."
+b2_06_q05,b2_06,boolean,"{""question"": ""В формальном письме следует случайно чередовать tú и usted."", ""correct"": false}",Форму обращения выбирают последовательно.
+b2_06_q06,b2_06,constructor,"{""question"": ""Собери: «Продаются книги»."", ""words"": [""Se"", ""venden"", ""libros""], ""correct_order"": [""Se"", ""venden"", ""libros""]}",Правильный порядок: Se venden libros.
